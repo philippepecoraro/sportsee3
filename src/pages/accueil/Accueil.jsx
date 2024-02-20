@@ -14,10 +14,8 @@ const Accueil = () => {
         localStorage.setItem('data1', JSON.stringify(data1));
         if (data1 === true) {
             navigate('/user/12');
-            // navigate(`https://sportsee-philippe-pecoraro.netlify.app/user/12`);
         } else if (data1 === false) {
             navigate('/user/18');
-            // navigate('https://sportsee-philippe-pecoraro.netlify.app/user/18');
         }
     }, [data1, navigate])
 

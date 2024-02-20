@@ -13,7 +13,6 @@ export const Service = () => {
     const getUser = async (id) => {
         try {
             const response = await fetch(`/user/${id}`);
-            // const response = await fetch(`https://sportsee-philippe-pecoraro.netlify.app/user/${id}`);
             if (!response.ok) {
                 throw new Error
                     (response.status)
@@ -34,7 +33,6 @@ export const Service = () => {
     const getUserActivity = async (id) => {
         try {
             const response = await fetch(`/user/${id}/activity`);
-            // const response = await fetch(`https://sportsee-philippe-pecoraro.netlify.app/user/${id}/activity`);
             if (!response.ok) {
                 throw new Error
                     (response.status)
