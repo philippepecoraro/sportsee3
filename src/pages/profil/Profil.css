@@ -1,0 +1,122 @@
+.profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+    width: 100%;
+    margin: auto;   
+}
+
+.profilNavbarBody {
+    display: flex;
+    flex-direction: row;   
+    width: 100%;
+}
+
+.profilBody {
+    width: 100%;
+}
+
+.profilHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 100px;  
+}
+
+.profilHeaderTextH1 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 48px;   
+    margin-bottom: 20px;   
+}
+
+.profilHeaderTextH1 span {
+    color: #FF0101;
+}
+
+.profilHeaderTextP {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;   
+    margin-top: 2px;
+}
+
+.profilActivityData {   
+    display: flex;
+    flex-direction: row; 
+    margin-left: 100px;
+    margin-top: 77px;
+}
+
+.profilActivity {
+    display: flex;
+    flex-direction: column;    
+    width: 70%;     
+}
+
+.profilActivityActivity {
+    height: 320px;
+    width: 100%;    
+    background-color: #FBFBFB; 
+    border-radius: 5px;    
+    position: relative;
+}
+
+.profilActivityActivityText {
+    position: absolute;
+    top: 20px;  
+    left: 4%;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 16px;
+    color: #20253A; 
+    z-index: 1; 
+}
+.profilKeyData {
+    display: flex;
+    flex-direction: column;
+    width: 21%;   
+    margin-left: 30px;
+}
+
+.profilActivitySession {    
+    width: 260px;   
+    height: 260px;
+    background-color: #FF0000; 
+    border-radius: 5px;    
+}
+
+.profilActivityPerformance {   
+    width: 260px;     
+    height: 260px;
+    border-radius: 5px;    
+}
+
+.profilActivitySessionPerformanceScore {   
+    height: 260px;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-radius: 5px; 
+}
+
+.profilActivityScore {   
+    width: 260px;   
+    height: 260px;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+}
+
+@media screen and (max-width: 1320px) {
+    .profilActivitySessionPerformanceScore {               
+        flex-direction: column;
+        align-items: center;   
+        height: auto; 
+
+    }
+    .profilActivitySession, .profilActivityPerformance,
+    .profilActivityScore {
+        margin-bottom: 30px;       
+    }
+}
