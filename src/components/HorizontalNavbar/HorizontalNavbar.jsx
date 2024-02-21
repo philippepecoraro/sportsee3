@@ -19,7 +19,7 @@ const HorizontalNavbar = () => {
                 </div>
             </div>
             <div className='navbar'>
-                <Link to={'#'} className='navbarText1'>Accueil</Link>
+                <Link to={'/'} className='navbarText1'>Accueil</Link>
                 <Link to={'#'} className='navbarText2'>Profil</Link>
                 <Link to={'#'} className='navbarText3'>Réglage</Link>
                 <Link to={'#'} className='navbarText4'>Communauté</Link>

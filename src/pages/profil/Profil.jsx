@@ -101,9 +101,7 @@ const Profil = () => {
 
                                 <p className='profilHeaderTextP'>Félicitation ! Vous avez explosé vos objectifs hier
                                     <span> &#128079;</span></p>
-                                <button className='accueil1'>
-                                    Accès aux données
-                                </button>
+
                             </div>
                             <div className='profilActivityData'>
                                 <div className='profilActivity'>
