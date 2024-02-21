@@ -25,21 +25,8 @@
     border-radius: 10px;
 }
 
-.accueil1 {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #9E9E9E;
-    border-radius: 10px;
-    margin-right: 80px;
-    cursor: pointer;    
-}
-
-.accueil2 {
-    width: 200px;
+.accueil1, .accueil2 {
+    width: 210px;
     height: 50px;
     display: flex;
     flex-direction: row;

@@ -2,7 +2,6 @@ import React from 'react'
 import './Profil.css'
 import VerticalNavbar from '../../components/VerticalNavbar/VerticalNavbar'
 import { MockedDataService } from '../../service/MockedDataService'
-import { Service } from '../../service/Service'
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import KeyData from '../../components/KeyData/KeyData'
@@ -30,102 +29,59 @@ const Profil = () => {
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (!typeOfDataBool) {
-            Service().getUser(id).then(user => {
-                if (user === undefined) {
-                    navigate('*')
-                }
-                else {
-                    const userDataData = new UserData(user);
-                    setData(userDataData);
-                }
-            })
-
-            Service().getUserActivity(id).then(activity => {
-                if (activity === undefined) {
-                    navigate('*')
-                }
-                else {
-                    const userDataDataActivity = new ActivityData(activity);
-                    setDataActivity(userDataDataActivity);
-                }
-            })
-
-            Service().getUserAverageSessions(id).then(session => {
-                if (session === undefined) {
-                    navigate('*')
-                }
-                else {
-                    const userDataDataSessions = new SessionsData(session);
-                    setDataSessions(userDataDataSessions);
-                }
-            })
-
-            Service().getUserPerformance(id).then(performance => {
-                if (performance === undefined) {
-                    navigate('*')
-                }
-                else {
-                    const userDataDataPerformance = new PerformanceData(performance);
-                    setDataPerformance(userDataDataPerformance);
-                }
-            })
+        if ((MockedDataService().getUser(id)) < 1) {
+            navigate('*')
         }
         else {
-            if ((MockedDataService().getUser(id)) < 1) {
-                navigate('*')
-            }
-            else {
-                (MockedDataService().getUser(id))
-                    .forEach(item => {
-                        if (item.id.toString() === id) {
-                            const userDataData = new UserData(item)
-                            setData(userDataData)
-                        }
-                    })
-            };
+            (MockedDataService().getUser(id))
+                .forEach(item => {
+                    if (item.id.toString() === id) {
+                        const userDataData = new UserData(item)
+                        setData(userDataData)
+                    }
+                })
+        };
 
 
-            if ((MockedDataService().getUserActivity(id)) < 1) {
-                navigate('*')
-            }
-            else {
-                (MockedDataService().getUserActivity(id))
-                    .forEach(item => {
-                        if (item.userId.toString() === id) {
-                            const userDataDataActivity = new ActivityData(item)
-                            setDataActivity(userDataDataActivity);
-                        }
-                    })
-            };
+        if ((MockedDataService().getUserActivity(id)) < 1) {
+            navigate('*')
+        }
+        else {
+            (MockedDataService().getUserActivity(id))
+                .forEach(item => {
+                    if (item.userId.toString() === id) {
+                        const userDataDataActivity = new ActivityData(item)
+                        setDataActivity(userDataDataActivity);
+                    }
+                })
+        };
 
 
-            if ((MockedDataService().getUserAverageSessions(id)) < 1) {
-                navigate('*')
-            }
-            else {
-                (MockedDataService().getUserAverageSessions(id))
-                    .forEach(item => {
-                        if (item.userId.toString() === id) {
-                            const userDataDataSessions = new SessionsData(item)
-                            setDataSessions(userDataDataSessions);
-                        }
-                    })
-            };
+        if ((MockedDataService().getUserAverageSessions(id)) < 1) {
+            navigate('*')
+        }
+        else {
+            (MockedDataService().getUserAverageSessions(id))
+                .forEach(item => {
+                    if (item.userId.toString() === id) {
+                        const userDataDataSessions = new SessionsData(item)
+                        setDataSessions(userDataDataSessions);
+                    }
+                })
+        };
 
 
-            if ((MockedDataService().getUserPerformance(id)) < 1) {
-                navigate('*')
-            }
-            else {
-                (MockedDataService().getUserPerformance(id))
-                    .forEach(item => {
-                        if (item.userId.toString() === id) {
-                            const userDataDataPerformance = new PerformanceData(item)
-                            setDataPerformance(userDataDataPerformance);
-                        }
-                    });
-            }
+        if ((MockedDataService().getUserPerformance(id)) < 1) {
+            navigate('*')
+        }
+        else {
+            (MockedDataService().getUserPerformance(id))
+                .forEach(item => {
+                    if (item.userId.toString() === id) {
+                        const userDataDataPerformance = new PerformanceData(item)
+                        setDataPerformance(userDataDataPerformance);
+                    }
+                });
         }
 
     }, [id, typeOfDataBool, navigate]);
@@ -142,8 +98,12 @@ const Profil = () => {
                             <div className='profilHeader'>
                                 <h1 className='profilHeaderTextH1'>Bonjour
                                     <span> {userData.firstName}</span></h1>
+
                                 <p className='profilHeaderTextP'>Félicitation ! Vous avez explosé vos objectifs hier
                                     <span> &#128079;</span></p>
+                                <button className='accueil1'>
+                                    Accès aux données
+                                </button>
                             </div>
                             <div className='profilActivityData'>
                                 <div className='profilActivity'>

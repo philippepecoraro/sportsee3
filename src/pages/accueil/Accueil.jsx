@@ -36,14 +36,14 @@ const Accueil = () => {
     return (
         <div className='accueil'>
             <div className='textAccueil'>
-                <h1>Veuiller choisir entre données mockés et données API</h1>
+                <h1>Accès aux données</h1>
             </div>
             <div className='linkAccueil'>
                 <button className='accueil1' onClick={donnees1}>
-                    Données Mockées
+                    Accès aux données de Thomas
                 </button>
                 <button className='accueil2' onClick={donnees2}>
-                    Données API
+                    Accès aux données de Céline
                 </button>
             </div>
         </div>
