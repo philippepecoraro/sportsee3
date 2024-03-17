@@ -1,5 +1,5 @@
 .accueil {   
-    width: 700px;    
+    max-width: 700px;    
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -25,8 +25,7 @@
     border-radius: 10px;
 }
 
-.accueil1, .accueil2 {
-    width: 210px;
+.accueil1, .accueil2 {    
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -40,4 +39,10 @@
 .accueil1:hover, .accueil2:hover {
     background-color: #757575;
     color: #FFFFFF;
+}
+
+@media (max-width:900px) {
+    .linkAccueil {
+        flex-direction: column;
+    }
 }

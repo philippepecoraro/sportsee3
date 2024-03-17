@@ -6,7 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale; 
   min-height: 780px;
   max-width: 1440px;
-  min-width: 1024px;
   margin: auto;
   border: 1px solid black;
 }
