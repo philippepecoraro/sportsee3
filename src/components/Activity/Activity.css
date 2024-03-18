@@ -9,3 +9,17 @@
 .recharts-surface {
     margin-right: 10px!important; 
 }
+
+@media (max-width: 740px) {
+    .profilActivityActivity .recharts-legend-wrapper {        
+        top: initial !important;
+        right: initial !important;   
+    }
+    .recharts-default-legend {
+        text-align: left !important;        
+    }
+    .recharts-legend-item {
+        display: block !important;
+        margin-left: 0;
+    }
+}

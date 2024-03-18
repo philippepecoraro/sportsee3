@@ -33,3 +33,14 @@
 svg#icon2, svg#icon3, svg#icon4 {
     margin-top: 20px;
 }
+
+.tooltip {
+    background-color: #FF0101 !important;
+    z-index: 10;
+}
+
+@media (max-width: 840px) {
+    .verticalNavbar {
+        display: none;
+    }
+}

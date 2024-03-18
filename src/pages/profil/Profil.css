@@ -46,12 +46,14 @@
     flex-direction: row; 
     margin-left: 100px;
     margin-top: 77px;
+    /* margin: auto; */
 }
 
 .profilActivity {
     display: flex;
     flex-direction: column;    
     width: 70%;     
+    /* margin: auto; */
 }
 
 .profilActivityActivity {
@@ -120,3 +122,41 @@
         margin-bottom: 30px;       
     }
 }
+
+@media (max-width: 1200px) {
+    .profilKeyData {
+        /* margin-left: 0; */
+    }
+}
+
+@media (max-width: 1200px) {
+    .profilActivityData {
+        flex-direction: column-reverse;  
+        margin: 30px auto;      
+    }
+    .profilKeyData {
+        flex-direction: row;
+        margin-left: 0;
+        margin: auto;
+        width: initial;
+    }
+    .profilActivity {
+        margin: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .profilActivitySessionPerformanceScore {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 740px) {
+    .profilKeyData {
+        flex-direction: column;
+    }
+    .profilHeader {
+        margin-left: 50px;
+    }  
+}
+
