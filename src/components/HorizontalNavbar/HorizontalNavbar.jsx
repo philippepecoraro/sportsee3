@@ -14,6 +14,10 @@ const HorizontalNavbar = () => {
     setShowHorizontalNavbar(!showHorizontalNavbar);
   };
 
+  const removeShowHorizontalNavbar = () => {
+    setShowHorizontalNavbar(false);
+  };
+
   return (
     <nav className="horizontalNavbar">
       <div className="horizontalNavbarContainer">
@@ -37,7 +41,7 @@ const HorizontalNavbar = () => {
                 to={"/"}
                 end
                 className="navbarText1"
-                onClick={handleShowHorizontalNavbar}
+                onClick={removeShowHorizontalNavbar}
                 style={({ isActive }) => {
                   return {
                     textDecoration: isActive ? "none" : "",
@@ -52,7 +56,7 @@ const HorizontalNavbar = () => {
                 to={"/emptypagereglage"}
                 end
                 className="navbarText3"
-                onClick={handleShowHorizontalNavbar}
+                onClick={removeShowHorizontalNavbar}
                 style={({ isActive }) => {
                   return {
                     textDecoration: isActive ? "none" : "",
@@ -67,7 +71,7 @@ const HorizontalNavbar = () => {
                 to={"/emptypagecommunaute"}
                 end
                 className="navbarText4"
-                onClick={handleShowHorizontalNavbar}
+                onClick={removeShowHorizontalNavbar}
                 style={({ isActive }) => {
                   return {
                     textDecoration: isActive ? "none" : "",
